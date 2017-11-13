@@ -5,8 +5,7 @@
 	<aura:attribute access="private" name="showNewButton" type="Boolean" default="false" />
 	
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-	
-	<aura:registerEvent name="formData" type="c:FormSubmit"/>
+	<aura:registerEvent name="formsubmit" type="c:FormSubmit"/>
 	
 	<h2 class="slds-page-header__title">Find a Boat</h2>
 	<form>

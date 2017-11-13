@@ -16,6 +16,12 @@
 	},
 	
 	onFormSubmit: function(component, event, helper) {
-		helper.broadcastSelectedBoatType(component);
+		var formSubmit = component.getEvent('formsubmit');
+		formSubmit.setParams({
+			formData: {
+				boatTypeId: helper.getSelectedBoatId(component)
+			}
+		});
+		formSubmit.fire();
 	}
 })
