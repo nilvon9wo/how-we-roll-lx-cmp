@@ -1,0 +1,27 @@
+<aura:component controller="BoatSearchResults" >
+	<aura:attribute access="public" name="boatTypeId" type="Id" default="" /> 
+	<aura:attribute access="private" name="boats" type="Boat__c[]" default="[]" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.loadBoatList}" />
+	<aura:handler name="change" value="{!v.boatTypeId}" action="{!c.loadBoatList}" />
+
+	<h2 class="slds-page-header__title">Matching Boats</h2>
+	
+	<aura:if isTrue="{!v.boats.length > 0}">
+		<lightning:layout horizontalAlign="space" verticalAlign="center" multipleRows="true">
+			<aura:iteration items="{!v.boats}" var="boat">
+				<lightning:layoutItem class="slds-m-right_small" flexibility="auto, grow" padding="around-small" size="3">
+					<c:BoatTile boat="{!boat}" />
+				</lightning:layoutItem>
+			</aura:iteration> 
+		</lightning:layout>
+		
+		<aura:set attribute="else">
+			<lightning:layout horizontalAlign="center" verticalAlign="center">
+				<div class="slds-align--absolute-center">
+					No boats found
+				</div>
+			</lightning:layout>
+		</aura:set>
+	</aura:if>
+</aura:component>

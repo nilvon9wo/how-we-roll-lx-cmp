@@ -1,0 +1,26 @@
+<aura:component controller="BoatSearchFormAuraCtrl" >
+	<aura:attribute access="private" name="boatTypeList" type="BoatType__c[]" default="[]" />
+	<aura:attribute access="private" name="boatTypeIdByNameMap" type="Map" />
+	<aura:attribute access="private" name="selectedBoatType" type="BoatType__c" />
+	<aura:attribute access="private" name="showNewButton" type="Boolean" default="false" />
+	
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	
+	<aura:registerEvent name="boatTypeMessage" type="c:BoatTypeMessage"/>
+	
+	<h2 class="slds-page-header__title">Find a Boat</h2>
+	<form>
+		<lightning:layout horizontalAlign="center" verticalAlign="end">
+		    <lightning:select name="select" value="{!v.selectedBoatType}">
+		        <option value="">All Types</option>
+		        <aura:iteration items="{!v.boatTypeList}" var="boatType">
+		            <option value="{!boatType.Name}">{!boatType.Name}</option>
+		        </aura:iteration> 
+		    </lightning:select>
+		    <lightning:button name="Search" label="Search" variant="brand" onclick="{!c.findBoats}"/>
+		    <aura:if isTrue="{!v.showNewButton}">
+		    	<lightning:button name="New" label="New" variant="neutral" onclick="{!c.createBoat}"/>
+		    </aura:if>
+		</lightning:layout>
+	</form>	
+</aura:component>
