@@ -1,5 +1,7 @@
 ({
-	loadBoatList : function(component, event, helper) {
-		helper.onSearch(component);
+	doSearch : function(component, event, helper) {
+		var params = event.getParam('arguments');
+		var boatTypeId = (params) ? params.boatTypeId : null;
+		helper.onSearch(component, boatTypeId);
 	}
 })

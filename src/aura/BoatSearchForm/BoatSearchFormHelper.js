@@ -1,10 +1,12 @@
 ({
 	broadcastSelectedBoatType: function(component) {
-		var boatTypeMessage = component.getEvent('boatTypeMessage');
-		boatTypeMessage.setParams({
-			boatTypeId: this.getSelectedBoatId(component)
+		var formData = component.getEvent('formData');
+		formData.setParams({
+			formData: {
+				boatTypeId: this.getSelectedBoatId(component)
+			}
 		});
-		boatTypeMessage.fire();
+		formData.fire();
 	},
 	
 	getSelectedBoatId: function(component) { 

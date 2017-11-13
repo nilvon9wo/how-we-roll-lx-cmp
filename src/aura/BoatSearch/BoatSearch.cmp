@@ -1,11 +1,10 @@
 <aura:component implements="flexipage:availableForAllPageTypes">
-	<aura:attribute access="private" name="boatTypeId" type="Id" default="" />
-	<aura:handler name="boatTypeMessage" event="c:BoatTypeMessage" action="{!c.handleBoatTypeMesage}" />
+	<aura:handler name="formData" event="c:FormSubmit" action="{!c.onFormSubmit}" />
 
 	<lightning:card class="slds-m-bottom_x-small">
 		<c:BoatSearchForm />
 	</lightning:card>
 	<lightning:card>
-		<c:BoatSearchResults boatTypeId="{!v.boatTypeId}"/>
+		<c:BoatSearchResults aura:id="boatSearchResults"/>
 	</lightning:card>
 </aura:component>

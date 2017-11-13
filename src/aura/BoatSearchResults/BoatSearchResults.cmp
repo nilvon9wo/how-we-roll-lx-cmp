@@ -1,9 +1,9 @@
 <aura:component controller="BoatSearchResults" >
-	<aura:attribute access="public" name="boatTypeId" type="Id" default="" /> 
 	<aura:attribute access="private" name="boats" type="Boat__c[]" default="[]" />
 
-	<aura:handler name="init" value="{!this}" action="{!c.loadBoatList}" />
-	<aura:handler name="change" value="{!v.boatTypeId}" action="{!c.loadBoatList}" />
+	<aura:method access="public" name="search" action="{!c.doSearch}" >
+		<aura:attribute name="boatTypeId" type="Id" />
+	</aura:method> 
 
 	<h2 class="slds-page-header__title">Matching Boats</h2>
 	

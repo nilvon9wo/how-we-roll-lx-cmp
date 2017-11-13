@@ -6,7 +6,7 @@
 	
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 	
-	<aura:registerEvent name="boatTypeMessage" type="c:BoatTypeMessage"/>
+	<aura:registerEvent name="formData" type="c:FormSubmit"/>
 	
 	<h2 class="slds-page-header__title">Find a Boat</h2>
 	<form>
@@ -17,7 +17,7 @@
 		            <option value="{!boatType.Name}">{!boatType.Name}</option>
 		        </aura:iteration> 
 		    </lightning:select>
-		    <lightning:button name="Search" label="Search" variant="brand" onclick="{!c.findBoats}"/>
+		    <lightning:button name="Search" label="Search" variant="brand" onclick="{!c.onFormSubmit}"/>
 		    <aura:if isTrue="{!v.showNewButton}">
 		    	<lightning:button name="New" label="New" variant="neutral" onclick="{!c.createBoat}"/>
 		    </aura:if>

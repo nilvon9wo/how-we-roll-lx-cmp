@@ -15,7 +15,7 @@
 		createRecordEvent.fire();
 	},
 	
-	findBoats: function(component, event, helper) {
+	onFormSubmit: function(component, event, helper) {
 		helper.broadcastSelectedBoatType(component);
 	}
 })
