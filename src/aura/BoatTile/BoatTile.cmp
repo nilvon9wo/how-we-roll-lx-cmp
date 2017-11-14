@@ -3,6 +3,7 @@
 	<aura:attribute access="public" name="selected" type="Boolean" default="false"/>
 	
 	<aura:registerEvent name="boatSelect" type="c:BoatSelect"/>
+	<aura:registerEvent name="boatSelected" type="c:BoatSelected"/>
 	
 	<lightning:button class="{! v.selected ? 'tile selected' : 'tile'}" aura:id="{!v.boat.Id}" onclick="{!c.onBoatClick}">
 		<div class="innertile" style="{! 'background-image:url(\'' + v.boat.Picture__c + '\'); '}">
