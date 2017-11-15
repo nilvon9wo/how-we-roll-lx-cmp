@@ -1,4 +1,4 @@
-<aura:component>
+<aura:component >
 	<aura:attribute access="public" name="boat" type="Boat__c" />
 	<aura:attribute access="public" name="selected" type="Boolean" default="false"/>
 	

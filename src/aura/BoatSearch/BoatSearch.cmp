@@ -4,7 +4,7 @@
 	<lightning:card class="slds-m-bottom_x-small">
 		<c:BoatSearchForm />
 	</lightning:card>
-	<lightning:card>
+	<lightning:card >
 		<c:BoatSearchResults aura:id="boatSearchResults"/>
 	</lightning:card>
 </aura:component>

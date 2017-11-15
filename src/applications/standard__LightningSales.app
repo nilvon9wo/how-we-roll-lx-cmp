@@ -5,6 +5,7 @@
     <formFactors>Large</formFactors>
     <navType>Standard</navType>
     <tab>standard-home</tab>
+    <tab>Friends_with_Boats</tab>
     <tab>standard-Opportunity</tab>
     <tab>standard-Lead</tab>
     <tab>standard-Task</tab>
