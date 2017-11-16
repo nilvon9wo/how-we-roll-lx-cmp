@@ -1,0 +1,31 @@
+<aura:component>
+	<aura:attribute access="public" name="boatReview" type="BoatReview__c" />
+	<li class="slds-feed__item">
+      <article class="slds-post">
+        <header class="slds-post__header slds-media">
+          <div class="slds-media__figure">
+            <a class="slds-avatar slds-avatar_circle slds-avatar_large" 
+            	data-userid="{!v.boatReview.CreatedBy.Id}" onclick="{!c.onUserInfoClick}"
+            >
+              <img alt="{!v.boatReview.CreatedBy.Name}" src="{!v.boatReview.CreatedBy.SmallPhotoUrl}" title="{!v.boatReview.CreatedBy.Name + ' avatar'}" />
+            </a>
+          </div>
+          <div class="slds-media__body">
+            <div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
+              <p>
+              	<a data-userid="{!v.boatReview.CreatedBy.Id}" onclick="{!c.onUserInfoClick}" title="{!v.boatReview.CreatedBy.Name}">{!v.CreatedBy.Name}</a>
+              	 — <a href="javascript:void(0);" title="{!v.boatReview.CreatedBy.CompanyName}">{!v.CreatedBy.CompanyName}</a></p>
+            </div>
+          </div>
+        </header>
+
+        <div class="slds-post__content slds-text-longform">
+          <p><lightning:formattedRichText value="{!v.boatReview.Comment__c}"/></p>
+          <p>{!v.boatReview.Name}</p>
+          <p>{!v.boatReview.Rating__c}</p>
+          <p><lightning:formattedDateTime value="{!v.boatReview.CreatedDate}" /></p>
+          <p><lightning:formattedDateTime value="{!v.boatReview.LastModifiedDate}" /></p>
+        </div>
+      </article>
+    </li>
+</aura:component>
