@@ -1,0 +1,25 @@
+<aura:component>
+	<aura:attribute access="public" name="boat" type="Boat__c" />
+	<aura:attribute access="private" name="boatReview" type="BoatReview__c" />
+	<aura:attribute name="recordError" type="String" description="An error message bound to force:recordData"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:registerEvent name="boatReviewAdded" type="c:BoatReviewAdded"/>
+
+    <force:recordData aura:id="service"
+      layoutType="FULL"
+      targetFields="{!v.boatReview}"
+      targetError="{!v.recordError}"
+      fields="Id, Name, Comment__c, Boat__c"
+	  recordUpdated="{!c.onRecordUpdated}"
+    />
+    	
+	<div class="slds-form slds-form_stacked">
+		<lightning:input label="Title" name="Title" value="{!v.boatReview.Name}" />
+		<h3>Description:</h3>
+		<lightning:inputRichText placeholder="Comment" disabledCategories="FORMAT_FONT"
+			value="{!v.boatReview.Comment__c}"
+		/>
+		<lightning:button iconName="utility:save" label="Submit" onclick="{!c.onSave}"/>
+	</div>
+</aura:component>
