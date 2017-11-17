@@ -10,6 +10,9 @@
 	},
 	
 	onRecordUpdated : function(component, event, helper) {
-		component.find('boatReviews').refresh();
+		var boatReviews = component.find('boatReviews');
+		if (boatReviews) {
+			boatReviews.refresh();
+		}
 	}
 })

@@ -1,4 +1,4 @@
-<aura:component>
+<aura:component >
 	<aura:attribute access="public" name="boatReview" type="BoatReview__c" />
 	<li class="slds-feed__item">
       <article class="slds-post">
@@ -22,9 +22,10 @@
         <div class="slds-post__content slds-text-longform">
           <p><lightning:formattedRichText value="{!v.boatReview.Comment__c}"/></p>
           <p>{!v.boatReview.Name}</p>
-          <p>{!v.boatReview.Rating__c}</p>
+          <p><c:FiveStarRating value="{!v.bookReview.Rating__c}" readonly="true" /></p>
           <p><lightning:formattedDateTime value="{!v.boatReview.CreatedDate}" /></p>
           <p><lightning:formattedDateTime value="{!v.boatReview.LastModifiedDate}" /></p>
+          
         </div>
       </article>
     </li>

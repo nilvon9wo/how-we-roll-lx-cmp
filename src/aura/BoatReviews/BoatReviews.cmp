@@ -35,7 +35,7 @@
         <div class="slds-post__content slds-text-longform">
           <p><lightning:formattedRichText value="{!boatReview.Comment__c}"/></p>
           <p>{!boatReview.Name}</p>
-          <p>{!boatReview.Rating__c}</p>
+          <p><c:FiveStarRating value="{!boatReview.Rating__c}" readonly="true" /></p>
           <p><lightning:formattedDateTime value="{!boatReview.CreatedDate}" /></p>
           <p><lightning:formattedDateTime value="{!boatReview.LastModifiedDate}" /></p>
         </div>
