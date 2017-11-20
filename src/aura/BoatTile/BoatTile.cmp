@@ -4,6 +4,7 @@
 	
 	<aura:registerEvent name="boatSelect" type="c:BoatSelect"/>
 	<aura:registerEvent name="boatSelected" type="c:BoatSelected"/>
+	<aura:registerEvent name="plotMapMarker" type="c:PlotMapMarker"/>
 	
 	<lightning:button class="{! v.selected ? 'tile selected' : 'tile'}" aura:id="{!v.boat.Id}" onclick="{!c.onBoatClick}">
 		<div class="innertile" style="{! 'background-image:url(\'' + v.boat.Picture__c + '\'); '}">

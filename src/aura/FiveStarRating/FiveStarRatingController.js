@@ -13,7 +13,6 @@
 	},
 	
 	onValueChange : function(component,event,helper) {
-		 console.log('##### newValue', event.getParam('value'));
 	     if (component.ratingObj) {
 	        var value = component.get('v.value');
 	        component.ratingObj.setRating(value, false);
