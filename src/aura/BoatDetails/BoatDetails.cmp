@@ -15,7 +15,7 @@
       recordUpdated="{!c.onRecordUpdated}"
     />
 
-	<aura:if isTrue="{!v.boat != undefined}">
+	<aura:if isTrue="{!v.boat}">
 		<lightning:tabset aura:id="boatTabSet" selectedTabId="{!v.selectedTabId}">
 			<lightning:tab label="Details">
 				<c:BoatDetail boat="{!v.boat}" />

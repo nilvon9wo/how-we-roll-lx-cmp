@@ -15,7 +15,7 @@
 		<lightning:layout horizontalAlign="space" verticalAlign="center" multipleRows="true">
 			<aura:iteration items="{!v.boats}" var="boat">
 				<lightning:layoutItem class="slds-m-right_small" flexibility="auto, grow" padding="around-small" size="3">
-					<c:BoatTile boat="{!boat}" selected="{!(v.selectedBoatId == boat.Id) ? true : false }" />
+					<c:BoatTile boat="{!boat}" selected="{!(v.selectedBoatId == boat.Id)}" />
 				</lightning:layoutItem>
 			</aura:iteration> 
 		</lightning:layout>
