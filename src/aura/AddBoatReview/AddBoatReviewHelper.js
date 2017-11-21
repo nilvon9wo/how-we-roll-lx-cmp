@@ -13,9 +13,7 @@
 					console.log('Error initalizing review template: ' + error);
 				} else {
 					review.Boat__c = component.get('v.boat').Id;
-					component.set('v.boatReview', review);
 				}
-				 
 			})
 		);
 	},
