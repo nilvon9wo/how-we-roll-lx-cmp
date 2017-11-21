@@ -4,10 +4,8 @@
     },
     
     onPlotMapMarker: function(component, event, helper) {
-    	var id = event.getParam('sObjectId');
     	var latitude = event.getParam('lat');
     	var longitude = event.getParam('long');
-    	var label = event.getParam('label');
 
 		var leafletMap = helper.getLeafletMap(component, latitude, longitude)
 			.setView([latitude, longitude], 13);
@@ -17,7 +15,7 @@
 		}).addTo(leafletMap);
 		
 		L.marker([latitude, longitude]).addTo(leafletMap)
-		    .bindPopup(label)
+		    .bindPopup(event.getParam('label'))
 		    .openPopup();
     }
 })
