@@ -1,4 +1,4 @@
-<aura:component controller="BoatReviews">
+<aura:component controller="BoatReviewsAuraCtrl"> 
 	<aura:attribute access="public" name="boat" type="Boat__c" />
 	<aura:attribute access="private" name="boatReviews" type="BoatReview__c[]" default="[]" />
 

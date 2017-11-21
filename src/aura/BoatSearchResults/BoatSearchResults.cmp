@@ -1,4 +1,4 @@
-<aura:component controller="BoatSearchResults" >
+<aura:component controller="BoatSearchResultsAuraCtrl" > 
 	<aura:attribute access="private" name="boatTypeId" type="Id" />
 	<aura:attribute access="private" name="boats" type="Boat__c[]" default="[]" />
 	<aura:attribute access="private" name="selectedBoatId" type="Id" />

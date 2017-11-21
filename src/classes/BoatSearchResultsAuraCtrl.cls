@@ -1,11 +1,11 @@
-public with sharing class BoatSearchResults {
+public with sharing class BoatSearchResultsAuraCtrl { 
 	BoatSelector boatSelector;
 	
-	public BoatSearchResults(BoatSelector boatSelector) {
+	public BoatSearchResultsAuraCtrl(BoatSelector boatSelector) {
 		this.boatSelector = boatSelector;
 	}
 	
-	public BoatSearchResults() {
+	public BoatSearchResultsAuraCtrl() {
 		this(new BoatSelector());
 	}
 	
