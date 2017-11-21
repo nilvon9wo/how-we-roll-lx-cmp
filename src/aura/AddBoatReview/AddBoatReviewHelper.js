@@ -10,7 +10,7 @@
 				var review = component.get('v.boatReview');
 				var error = component.get('v.recordError');
 				if (error || !review) {
-					console.log('Error initalizing review template: ' + error);
+					console.error('Error initalizing review template: ' + error);
 				} else {
 					review.Boat__c = component.get('v.boat').Id;
 				}

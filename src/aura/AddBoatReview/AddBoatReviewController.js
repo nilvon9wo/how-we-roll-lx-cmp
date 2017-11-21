@@ -11,7 +11,7 @@
 		component.find('service')
 			.saveRecord($A.getCallback(function (saveResult){
 				if (saveResult.state === 'ERROR') {
-					console.log('Error saving review record: ' + component.get('v.recordError'));
+					console.error('Error saving review record: ' + component.get('v.recordError'));
 				} else {
 					helper.alertSuccess('Your review has been saved successfully');
 					helper.onInit(component, event, helper);

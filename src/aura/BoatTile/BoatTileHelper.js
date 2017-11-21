@@ -7,9 +7,18 @@
 		boatSelect.fire();		
 	},
 	
-	detailSelectedBoat: function(component) {
+	detailSelectedBoat: function(boat) {
 		var boatSelected = $A.get('e.c:BoatSelected');
-		boatSelected.setParam('boat', component.get('v.boat'));
+		boatSelected.setParam('boat', boat);
 		boatSelected.fire();	
+	},
+	
+	plot: function(boat) {
+		var plotMapMarker = $A.get('e.c:PlotMapMarker');
+		plotMapMarker.setParam('sObjectId', boat.Id); 
+		plotMapMarker.setParam('lat', boat.Geolocation__Latitude__s); 
+		plotMapMarker.setParam('long', boat.Geolocation__Longitude__s); 
+		plotMapMarker.setParam('label', boat.Name); 
+		plotMapMarker.fire();
 	}
 })
