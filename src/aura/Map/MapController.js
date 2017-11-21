@@ -1,6 +1,6 @@
 ({
     jsLoaded: function(component) {
-        component.set("v.jsLoaded", true);
+        component.set('v.jsLoaded', true);
     },
     
     onPlotMapMarker: function(component, event, helper) {
@@ -9,7 +9,9 @@
     	var longitude = event.getParam('long');
     	var label = event.getParam('label');
 
-		var leafletMap = helper.getLeafletMap(component, latitude, longitude);
+		var leafletMap = helper.getLeafletMap(component, latitude, longitude)
+			.setView([latitude, longitude], 13);
+			
 		L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
 		    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(leafletMap);

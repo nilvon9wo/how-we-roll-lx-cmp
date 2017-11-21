@@ -4,8 +4,7 @@
 		
 		if (!leafletMap) {
 	    	var mapContainer = component.find('map').getElement(); 
-		    leafletMap = L.map(mapContainer, {zoomControl: false, tap: false})
-		    	.setView([latitude, longitude], 13);
+		    leafletMap = L.map(mapContainer, {zoomControl: false, tap: false});
 		    component.set('v.leafletMap', leafletMap);
 		}
 
