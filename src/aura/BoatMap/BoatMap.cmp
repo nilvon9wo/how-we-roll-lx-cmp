@@ -5,7 +5,7 @@
     <aura:attribute access="private" name="jsLoaded" type="Boolean" default="false"/>
     <aura:attribute access="private" name="leafletMap" type="Object" />
     
-    <aura:handler event="c:PlotMapMarker" action="{!c.onPlotMapMarker}" />
+    <aura:handler event="c:BoatMarkerEvent" action="{!c.onPlotMapMarker}" />
     
     <ltng:require styles="{!$Resource.Leaflet + '/leaflet.css'}" 
                   scripts="{!$Resource.Leaflet + '/leaflet-src.js'}"

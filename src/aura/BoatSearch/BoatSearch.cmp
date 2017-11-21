@@ -1,5 +1,5 @@
 <aura:component implements="flexipage:availableForAllPageTypes">
-	<aura:handler name="formsubmit" event="c:FormSubmit" action="{!c.onFormSubmit}" phase="capture" />
+	<aura:handler name="boatTypeSelected" event="c:BoatTypeSelectedEvent" action="{!c.onFormSubmit}" phase="capture" />
 
 	<lightning:card class="slds-m-bottom_x-small">
 		<c:BoatSearchForm />

@@ -3,7 +3,7 @@
 	<aura:attribute access="private" name="boats" type="Boat__c[]" default="[]" />
 	<aura:attribute access="private" name="selectedBoatId" type="Id" />
 
-	<aura:handler name="boatSelect" event="c:BoatSelect" action="{!c.onBoatSelect}" phase="capture" />
+	<aura:handler event="c:BoatSelectedEvent" action="{!c.onBoatSelected}" phase="capture" />
 
     <aura:method name="search" description="accepts boatTypeId and executes search that refreshes the boats attribute">
         <aura:attribute name="boatTypeId" type="Id"/>

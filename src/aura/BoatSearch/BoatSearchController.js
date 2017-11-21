@@ -1,6 +1,6 @@
 ({
 	onFormSubmit : function(component, event, helper){
-        var boatTypeId = event.getParam('formData').boatTypeId;
+        var boatTypeId = event.getParam('boatTypeId');
         component.find('boatSearchResults').search(boatTypeId);
     }
 })

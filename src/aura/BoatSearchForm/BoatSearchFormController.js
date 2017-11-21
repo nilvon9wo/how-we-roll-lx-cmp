@@ -16,11 +16,9 @@
 	},
 	
 	onFormSubmit: function(component, event, helper) {
-		var formSubmit = component.getEvent('formsubmit');
+		var formSubmit = component.getEvent('boatTypeSelected');
 		formSubmit.setParams({
-			formData: {
-				boatTypeId: helper.getSelectedBoatId(component)
-			}
+			boatTypeId: helper.getSelectedBoatId(component)
 		});
 		formSubmit.fire();
 	}

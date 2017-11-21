@@ -4,7 +4,7 @@
 	<aura:attribute name="recordError" type="String" description="An error message bound to force:recordData"/>
 
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-	<aura:registerEvent name="boatReviewAdded" type="c:BoatReviewAdded"/>
+	<aura:registerEvent name="boatReviewAdded" type="c:BoatReviewAddedEvent"/>
 
     <force:recordData aura:id="service"
       layoutType="FULL"

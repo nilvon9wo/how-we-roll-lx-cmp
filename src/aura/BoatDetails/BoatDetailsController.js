@@ -5,7 +5,7 @@
 	},
 	
 	onBoatSelected : function(component, event, helper) {
-		component.set('v.id', event.getParam('boat').Id);
+		component.set('v.id', event.getParam('boatId'));
 		component.find('service').reloadRecord();
 	},
 	

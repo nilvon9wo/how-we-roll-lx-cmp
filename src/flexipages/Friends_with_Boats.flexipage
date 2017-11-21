@@ -24,7 +24,7 @@
                 <name>width</name>
                 <value>100%</value>
             </componentInstanceProperties>
-            <componentName>Map</componentName>
+            <componentName>BoatMap</componentName>
         </componentInstances>
         <name>region3</name>
         <type>Region</type>
